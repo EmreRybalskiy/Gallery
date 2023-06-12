@@ -3,20 +3,21 @@ import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NativeBaseProvider} from 'native-base';
 import {NavigationContainer} from '@react-navigation/native';
 import {RootStack} from './src/navigation/RootStack';
-import {StyleSheet} from 'react-native';
+import {Provider} from 'react-redux';
+import {store} from './src/redux/store';
 
 function App(): JSX.Element {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <NativeBaseProvider>
-          <RootStack />
-        </NativeBaseProvider>
+        <Provider store={store}>
+          <NativeBaseProvider>
+            <RootStack />
+          </NativeBaseProvider>
+        </Provider>
       </NavigationContainer>
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({});
 
 export default App;
