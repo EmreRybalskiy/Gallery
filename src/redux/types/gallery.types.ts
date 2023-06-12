@@ -7,13 +7,13 @@ export interface GalleryState {
 }
 
 export enum GalleryActionTypes {
-  GALLERY = 'GALLERY',
+  GET_GALLERY = 'GET_GALLERY',
   GALLERY_SUCCESS = 'GALLERY_SUCCESS',
   GALLERY_ERROR = 'GALLERY_ERROR',
 }
 
 interface GalleryAction {
-  type: GalleryActionTypes.GALLERY;
+  type: GalleryActionTypes.GET_GALLERY;
 }
 interface GallerySuccessAction {
   type: GalleryActionTypes.GALLERY_SUCCESS;

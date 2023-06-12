@@ -15,7 +15,7 @@ export const galleryReducer = (
   action: GalleryActionType,
 ): GalleryState => {
   switch (action.type) {
-    case GalleryActionTypes.GALLERY:
+    case GalleryActionTypes.GET_GALLERY:
       return {isLoading: true, error: null, gallery: []};
     case GalleryActionTypes.GALLERY_SUCCESS:
       return {isLoading: false, error: null, gallery: action.payload};
